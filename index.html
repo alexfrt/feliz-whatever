@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link href="cover.css" rel="stylesheet">
+    <title>Feliz ${whatever}!</title>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <header class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Feliz ${whatever}!</h3>
+              <nav class="nav nav-masthead">
+                <a class="nav-link active" href="#">Home</a>
+              </nav>
+            </div>
+          </header>
+
+          <main role="main" class="inner cover">
+            <p class="lead">Crie aqui uma linda mensagem de ano novo para enviar pra seus amigos, sua família, seu cachorro, etc. Eles sabem que é de coração :)</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-secondary">Criar Mensagem</a>
+            </p>
+
+            <blockquote class="pull-right">
+              <p>Caros amigos,</p>
+              <div class="msg"><p>[ Imagine aqui um texto grande, palavras bonitas e cheio de agradecimentos... ]</p></div>
+              <p>Feliz Ano Novo!</p>
+            </blockquote>
+          </main>
+
+          <footer class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      msgs = [
+        "Eu adoro a virada do ano e esta vai ser a mais emocionante de todas. Quero pular, dançar e celebrar com toda minha força. Vou atrair sensações e energias positivas para que o ano seja extraordinário!", 
+        "Agradeço tudo que me aconteceu no último ano e desejo que o próximo tenha ainda mais luz. Que não falte alegria a todas as pessoas, nem saúde, paz e amor. A felicidade é uma escolha e eu escolho sempre ser feliz", 
+        "Tenha coragem para assumir e enfrentar as dificuldades. Persevere para que cada dia seja regado de esperança e jamais desista ou desanime de seus sonhos.", 
+        "Desejo a você que na paz do Senhor encontre o seu caminho e que ele seja trilhado com muita fé para que cada vez mais você acredite nesse sentimento que é capaz de transpor obstáculos e nos fazer felizes.",
+        "Que cada ano que você complete acrescente sabedoria e não apenas idade; que em cada ciclo que viva se renovem e cresçam o amor, a amizade, a esperança e a paz.",
+        "Que o Evangelho seja nossa orientação em cada dia deste novo ano. Que saibamos encontrar a felicidade na paz e no amor de Cristo. Que Deus abençoe a todos e Sua luz ilumine os nossos corações.",
+        "Esqueça os erros, os fracassos, as decepções e as frustrações. Esqueça tudo que foi mau e leve para o novo ano apenas as aprendizagens e as boas lembranças.",
+        "A passagem para o novo ano vai ser feita com muita paz, alegria e amor. Vai ser uma festa gigante com luzes e cores, brilho e sabores surpreendentes e inesquecíveis. Desejo um fim de ano e um começo do novo maravilhosos!",
+        "Neste último dia podemos fazer o que quisermos: pular, dançar, comemorar. Com um sorriso nos lábios vamos transformar o dia de hoje no dia mais importante de todo ano.",
+        "Deus nos presenteou com mais um ano que agora despedimos, e a Ele devemos agradecer pela generosidade e misericórdia infinitas.",
+        "Alegria, paz, saúde e amor é o que desejo para todas as pessoas. Esta virada do ano representará sentimentos renovados e sensações ótimas e inspiradoras.",
+        "Meu amor, agora que o ano está acabando eu tenho muito pelo que agradecer, mas acima de tudo eu agradeço por você. Pois viver mais um ano ao seu lado foi uma bênção sem igual.",
+        "O ano novo chegou! Essa época linda em que podemos olhar para trás, agradecer pelo ano que passou e relembrar os bons momentos. Um ano novo chega com novas oportunidades e 365 chances para irmos atrás dos nossos sonhos!",
+        "Desejo a todos um ano novo de muita alegria, saúde e paz! Façam este ano valer a pena e corram atrás dos seus objetivos!"
+      ]
+
+      $(".btn").click(function() {
+        randMsgs = document.createElement('div');
+
+        for (var i = 0; i < 2; i++) {
+          p = document.createElement("p");
+          $(p).text(msgs[Math.floor(Math.random() * msgs.length)]);
+          $(randMsgs).append(p);
+        }
+
+        $(".msg").empty();
+        $(".msg").append(randMsgs);
+      })
+    </script>
+  </body>
+</html>
